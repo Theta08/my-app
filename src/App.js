@@ -1,4 +1,7 @@
 import { Component } from 'react';
+import TOC from './components/TOC';
+import Content from './components/Content';
+import Subject from './components/Subject';
 import './App.css';
 
 // function App() {
@@ -9,64 +12,30 @@ import './App.css';
 //   );
 // }
 
-//Component: 정리정돈
-//컴포넌트를 만들때 하나의 최상위 태그만 써야함
-//Component 오타 주의!!
-class Subject extends Component{
-  render(){
-    return(
-      <header>
-          <h1>Web</h1>
-          world wide web!
-      </header>
-    );
-  }
-}
 
-class Test1 extends Component{
-  render(){
-    return(
-      <body>
-     <div class="te">test</div>
-      </body>
+
+// class Test1 extends Component{
+//   render(){
+//     return(
+//       <body>
+//      <div class="te">test</div>
+//       </body>
      
-    );
-  }
-}
+//     );
+//   }
+// }
 
-class TOC extends Component{
-  render(){
-    return(
-      <nav>
-          <ul>
-              <li><a href="1.html">HTML</a></li>
-              <li><a href="2.html">CSS</a></li>
-              <li><a href="3.html">JavaScript</a></li>
-          </ul>
-      </nav> 
-    );
-  }
-}
-class Content extends Component{
-  render(){
-    return(
-      <article>
-          <h2>HTML</h2>
-          HTML is HyeperText MarkUp Language.
-      </article>
-    );
-  }
-}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/* 페이스북에서 만든 언어 JXX?에서 js로 변환 */}
-        <Subject></Subject>
+        {/* 사용자 정의 */}
+        <Subject title="WEB" sub="world wide web!"></Subject>
+        {/* <Subject title="React" sub="For UI"></Subject> */}
         <TOC></TOC>
-        <Content></Content>
-        <Test1>심심하다</Test1>
+        <Content title="HTML" desc=" HTML is HyeperText MarkUp Language."></Content>
       </div>
     )
   }
